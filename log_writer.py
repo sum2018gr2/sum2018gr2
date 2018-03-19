@@ -136,7 +136,7 @@ class LogWriter(object):
 		# applied on number 47 
 		# to the output of get_movie_reference
 		outcome = str(self.get_movie_reference()) + "\n"
-		outcome += str(LogWriter.get_movie_reference(47))
+		outcome += str(LogWriter.computation(47))
 
 	def combining_method(self):
 		#14
