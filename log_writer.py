@@ -43,7 +43,7 @@ class LogWriter(object):
 		#Count occurances of character 'o' in text
 		#e.g.:
 		# count_o("oOo0O00o") == 5
-		pass
+		return text.count('o') + text.count('O')		
 
 	def get_first_part(self):
 		#5
