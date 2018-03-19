@@ -17,6 +17,8 @@ class LogWriter(object):
 		#1
 		# return every second element (counting from index 1) from passed list 
 		# e.g. get_every_second_element([1,2,3,4]) == [2,4]
+		lista = data[1::2]
+		print (lista)
 		pass
 
 	@staticmethod
@@ -44,7 +46,9 @@ class LogWriter(object):
 		#
 		#e.g:
 		# insert_data_in_text("AAAA list BBBB", [1,2,3]) = "AAAA list ([1, 2, 3]) BBBB"
-		pass
+		lista = text.partition("list")
+        	text = lista[0] + lista[1] +"(" + str(data) + ")" + lista[2]
+        	return text
 
 	@staticmethod
 	def count_o(text):
@@ -126,7 +130,8 @@ class LogWriter(object):
 		# - the value of function computation (in argument)
 		# applied on number 47 
 		# to the output of get_movie_reference
-		pass
+		outcome = str(self.get_movie_reference()) + "\n"
+		outcome += str(LogWriter.get_movie_reference(47))
 
 	def combining_method(self):
 		#14
