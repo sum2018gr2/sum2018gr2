@@ -26,7 +26,13 @@ class LogWriter(object):
 		#(use function get_every_second_element )
 		#e.g:
 		# avg_every_second_element([1,2,3,4]) == 3.0
-		pass
+		#pass
+		elements = get_every_second_element(data)
+		sum = 0
+		for x in elements:
+			sum += x
+		average = sum / len(elements)
+		return average
 
 	@staticmethod
 	def insert_data_in_text(text, data):
@@ -38,7 +44,9 @@ class LogWriter(object):
 		#
 		#e.g:
 		# insert_data_in_text("AAAA list BBBB", [1,2,3]) = "AAAA list ([1, 2, 3]) BBBB"
-		pass
+		lista = text.partition("list")
+        	text = lista[0] + lista[1] +"(" + str(data) + ")" + lista[2]
+        	return text
 
 	@staticmethod
 	def count_o(text):
@@ -118,7 +126,8 @@ class LogWriter(object):
 		# - the value of function computation (in argument)
 		# applied on number 47 
 		# to the output of get_movie_reference
-		pass
+		outcome = str(self.get_movie_reference()) + "\n"
+		outcome += str(LogWriter.get_movie_reference(47))
 
 	def combining_method(self):
 		#14
