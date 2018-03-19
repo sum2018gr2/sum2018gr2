@@ -133,7 +133,7 @@ if __name__=="__main__":
 	"""
 	list_data = [1,2,34,4]
 	test_instance = LogWriter(list_data, head_text)
-	print test_instance
+	print(test_instance)
 
 #
 #examplary output is below
