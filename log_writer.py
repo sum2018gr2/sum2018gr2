@@ -7,7 +7,10 @@ class LogWriter(object):
 		#7
 		#save list_data and head_text as members of this object
 		# create member o_count with value None
-		pass
+		self.list_data = list_data
+		self.head_text = head_text
+		self.o_count = None
+		#pass
 
 	@staticmethod
 	def get_every_second_element(data):
