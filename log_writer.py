@@ -44,7 +44,9 @@ class LogWriter(object):
 		#
 		#e.g:
 		# insert_data_in_text("AAAA list BBBB", [1,2,3]) = "AAAA list ([1, 2, 3]) BBBB"
-		pass
+		lista = text.partition("list")
+        	text = lista[0] + lista[1] +"(" + str(data) + ")" + lista[2]
+        	return text
 
 	@staticmethod
 	def count_o(text):
@@ -76,10 +78,6 @@ class LogWriter(object):
 	@staticmethod
 	def what_is_your_quest(quest="holy grail"):
 		#8
-		if quest:
-			return ('To seek the ' + quest)
-		else:
-			return 'To seek the holy grail'
 		# if the argument is not specified return "To seek the holy grail"
 		# in other case append the texts "To seek the " with argument and return
 		pass
