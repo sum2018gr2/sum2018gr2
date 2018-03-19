@@ -26,7 +26,13 @@ class LogWriter(object):
 		#(use function get_every_second_element )
 		#e.g:
 		# avg_every_second_element([1,2,3,4]) == 3.0
-		pass
+		#pass
+		elements = get_every_second_element(data)
+		sum = 0
+		for x in elements:
+			sum += x
+		average = sum / len(elements)
+		return average
 
 	@staticmethod
 	def insert_data_in_text(text, data):
@@ -97,14 +103,7 @@ class LogWriter(object):
 		#Lastly if o_count is higher than seven append empty line and
 		#empty call of what_is_your_quest to the output.
 		#Return the output
-		if self.o_count > 7 :
-			return str("\n") + self.what_is_your_quest()
-
-		if self.o_count_is_even():
-			return self.what_is_added_the_meaning_of_life(self.o_count)
-		else
-			return self.what_is_your_quest(self.head_text.split(' ')[1])
-		
+		pass
 
 	@staticmethod
 	def computation(x):
