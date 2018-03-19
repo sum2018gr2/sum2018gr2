@@ -139,6 +139,7 @@ class LogWriter(object):
 		# to the output of get_movie_reference
 		outcome = str(self.get_movie_reference()) + "\n"
 		outcome += str(LogWriter.computation(47))
+		return outcome
 
 	def combining_method(self):
             first_part_text = self.get_first_part()
