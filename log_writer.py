@@ -116,13 +116,16 @@ class LogWriter(object):
 		pass
 
 	def combining_method(self):
-		#14
-		#concatenate:
+        #14
+        #concatenate:
 		# - text output from get_first_part
 		# - string "0 O 0 O 0 O 0 O 0 O 0 O"
 		# - output of get_second_part applied on computation method (class member)
 		#return the concatenation
-		pass
+            first_part_text = self.get_first_part()
+            middle_part_text = "0 O 0 O 0 O 0 O 0 O 0 O"
+            end_part_text = self.get_second_part(self.computation)
+            return first_part_text + middle_part_text + end_part_text
 
 	def __str__(self):
 		return self.combining_method()
