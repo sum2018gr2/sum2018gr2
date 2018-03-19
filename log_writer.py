@@ -56,7 +56,7 @@ class LogWriter(object):
 		#Count occurances of character 'o' in text
 		#e.g.:
 		# count_o("oOo0O00o") == 5
-		pass
+		return text.count('o') + text.count('O')		
 
 	def get_first_part(self):
 		#5
@@ -67,7 +67,12 @@ class LogWriter(object):
 		#Set member o_count with number of o's in contained 
 		# in text you created above - use count_o.
 		# Return newly created text AND value of o_count
-		pass
+		self.head_text += "_________"
+		self.head_text += "\n After change: \n"
+		self.head_text += str(insert_data_in_text)
+		self.list_data.append(insert_data_in_text)
+		o_count = count_o(self.head_text)
+		return (self.head_text, o_count)
 
 	@staticmethod
 	def what_is_added_the_meaning_of_life(add):
@@ -75,7 +80,11 @@ class LogWriter(object):
 		#return square root of 42 PLUS add
 		# if add is not given return 42 
 		#
-		pass
+		import math
+		if add == None:
+			return 42
+		else:
+			return math.sqrt(42) + add
 
 	@staticmethod
 	def what_is_your_quest(quest="holy grail"):
