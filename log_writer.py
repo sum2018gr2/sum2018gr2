@@ -7,7 +7,10 @@ class LogWriter(object):
 		#7
 		#save list_data and head_text as members of this object
 		# create member o_count with value None
-		pass
+		self.list_data = list_data
+		self.head_text = head_text
+		self.o_count = None
+		#pass
 
 	@staticmethod
 	def get_every_second_element(data):
@@ -23,7 +26,13 @@ class LogWriter(object):
 		#(use function get_every_second_element )
 		#e.g:
 		# avg_every_second_element([1,2,3,4]) == 3.0
-		pass
+		#pass
+		elements = get_every_second_element(data)
+		sum = 0
+		for x in elements:
+			sum += x
+		average = sum / len(elements)
+		return average
 
 	@staticmethod
 	def insert_data_in_text(text, data):
@@ -35,7 +44,9 @@ class LogWriter(object):
 		#
 		#e.g:
 		# insert_data_in_text("AAAA list BBBB", [1,2,3]) = "AAAA list ([1, 2, 3]) BBBB"
-		pass
+		lista = text.partition("list")
+        	text = lista[0] + lista[1] +"(" + str(data) + ")" + lista[2]
+        	return text
 
 	@staticmethod
 	def count_o(text):
@@ -75,7 +86,7 @@ class LogWriter(object):
 	def get_second_word(text):
 		#9
 		# Return the second word of text
-		pass
+		return text.split()[1]
 
 	def o_count_is_even(self):
 		#10
@@ -103,7 +114,7 @@ class LogWriter(object):
 		# x to the second power
 		# square root of x
 		# square root of the square root of x
-		pass
+		return x**2 + math.sqrt(x) + math.sqrt(math.sqrt(x))
 
 	def get_second_part(self, computation=None):
 		#13
@@ -113,7 +124,8 @@ class LogWriter(object):
 		# - the value of function computation (in argument)
 		# applied on number 47 
 		# to the output of get_movie_reference
-		pass
+		outcome = str(self.get_movie_reference()) + "\n"
+		outcome += str(LogWriter.get_movie_reference(47))
 
 	def combining_method(self):
 		#14
@@ -133,7 +145,7 @@ if __name__=="__main__":
 	"""
 	list_data = [1,2,34,4]
 	test_instance = LogWriter(list_data, head_text)
-	print test_instance
+	print(test_instance)
 
 #
 #examplary output is below
