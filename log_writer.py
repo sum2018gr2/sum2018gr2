@@ -77,11 +77,13 @@ class LogWriter(object):
 		# Return the second word of text
 		pass
 
-	def o_count_is_even(self):
+	def o_count_is_even(self):		
 		#10
 		# return True if o_count is even
 		# return False is o_count is odd
-		pass
+		if self.o_count % 2 == 0:
+			return True
+		return False
 
 	def get_movie_reference(self):
 		#11
