@@ -26,7 +26,13 @@ class LogWriter(object):
 		#(use function get_every_second_element )
 		#e.g:
 		# avg_every_second_element([1,2,3,4]) == 3.0
-		pass
+		#pass
+		elements = get_every_second_element(data)
+		sum = 0
+		for x in elements:
+			sum += x
+		average = sum / len(elements)
+		return average
 
 	@staticmethod
 	def insert_data_in_text(text, data):
