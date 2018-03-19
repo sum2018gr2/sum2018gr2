@@ -7,7 +7,10 @@ class LogWriter(object):
 		#7
 		#save list_data and head_text as members of this object
 		# create member o_count with value None
-		pass
+		self.list_data = list_data
+		self.head_text = head_text
+		self.o_count = None
+		#pass
 
 	@staticmethod
 	def get_every_second_element(data):
@@ -75,7 +78,7 @@ class LogWriter(object):
 	def get_second_word(text):
 		#9
 		# Return the second word of text
-		pass
+		return text.split()[1]
 
 	def o_count_is_even(self):
 		#10
@@ -110,7 +113,7 @@ class LogWriter(object):
 		# x to the second power
 		# square root of x
 		# square root of the square root of x
-		pass
+		return x**2 + math.sqrt(x) + math.sqrt(math.sqrt(x))
 
 	def get_second_part(self, computation=None):
 		#13
@@ -140,7 +143,7 @@ if __name__=="__main__":
 	"""
 	list_data = [1,2,34,4]
 	test_instance = LogWriter(list_data, head_text)
-	print test_instance
+	print(test_instance)
 
 #
 #examplary output is below
