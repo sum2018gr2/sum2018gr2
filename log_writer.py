@@ -47,8 +47,8 @@ class LogWriter(object):
 		#e.g:
 		# insert_data_in_text("AAAA list BBBB", [1,2,3]) = "AAAA list ([1, 2, 3]) BBBB"
 		lista = text.partition("list")
-        	text = lista[0] + lista[1] +"(" + str(data) + ")" + lista[2]
-        	return text
+		text = lista[0] + lista[1] +"(" + str(data) + ")" + lista[2]
+		return text
 
 	@staticmethod
 	def count_o(text):
@@ -139,7 +139,6 @@ class LogWriter(object):
 		# to the output of get_movie_reference
 		outcome = str(self.get_movie_reference()) + "\n"
 		outcome += str(LogWriter.computation(47))
-		return outcome
 
 	def combining_method(self):
             first_part_text = self.get_first_part()
